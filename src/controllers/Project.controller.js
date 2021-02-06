@@ -16,7 +16,7 @@ const findProjectByName = ( req = request, res = response ) => {
     return res.status(200).json({
         code: 200,
         msg: 'projects list with name: '+name,
-        projects
+        projects: [ ...projects ]
     });
 }
 
