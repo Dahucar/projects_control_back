@@ -14,21 +14,20 @@ const showProjects = ( req = request, res = response ) => {
 }
 
 const findProjectByName = ( req = request, res = response ) => {
-    //TODO: validate request body 
+    //TODO: validate request body
+    // puede llevar con valor string 'empty' 
     const name = req.params.name;
-    const date = req.params.data;
+    const date = req.params.date;
     //TODO: mejorar filtro 
-    const projects = data.filter(project => {
-        let nameP = project.proyecto.toLowerCase();
-        if(nameP === name.toLowerCase() || project.timestamp == date){
-            return project;
-        }
-        // project.proyecto.toLowerCase() === name.toLowerCase()
-    });
+    const projects = data.filter(
+        pro => pro.proyecto.toLowerCase() === name.toLowerCase() || 
+        pro.timestamp.split(' ', 1)[0] == date
+    );
+    
     if (projects.length == 0) {
         return res.status(400).json({
             code: 400,
-            msg: `no projects with ${name} parameter` 
+            msg: `no projects with ${name} or ${date} parameter` 
         });
     }
 
@@ -43,20 +42,7 @@ const findProjectByName = ( req = request, res = response ) => {
     });
 }
 
-
-const findProjectByDate = ( req = request, res = response ) => {
-    //TODO: validate request body 
-    const date = req.params.date;
-    const projects = data.filter( project => project.timestamp === date );
-    return res.status(200).json({
-        code: 200,
-        msg: 'projects list with timestamp: '+date,
-        projects
-    });
-}
-
 module.exports = {
     showProjects,
     findProjectByName,
-    findProjectByDate
 }
