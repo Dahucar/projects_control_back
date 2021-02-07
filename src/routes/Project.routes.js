@@ -8,7 +8,7 @@ const {
 } = require('../controllers/Project.controller');
 
 projectRouter.get('/', showProjects);
-projectRouter.get('/project/:name', findProjectByName);
+projectRouter.get('/project/:name/:date', findProjectByName);
 projectRouter.get('/filter-data/:date', findProjectByDate);
 
 module.exports = projectRouter;
