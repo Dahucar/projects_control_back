@@ -95,6 +95,18 @@
       "subproyecto": "B-SUB-2",
       "estatus": 1,
       "timestamp": "2020-01-01 12:00:00"
+    },
+    {
+      "proyecto": "Java",
+      "subproyecto": "JavaEE",
+      "estatus": 1,
+      "timestamp": "2021-02-11 12:00:00"
+    },
+    {
+      "proyecto": "Java",
+      "subproyecto": "JavaSE",
+      "estatus": 1,
+      "timestamp": "2021-02-11 11:00:00"
     }
   ]
 }
