@@ -9,6 +9,6 @@
 - Copiar el archivo **.env.example** a **.env** donde en la clave definida deberá establecer el puerto del servicio REST deseado. Se recomienda usar el puerto **4350**, en caso de seleccionar otro deberá espesificarlo en el archivo **.env** en el proyecto cliente.
     > PORT=
 ### `npm start` para ejecutar el proyecto.
-ejecutara el servidor para probar el servicio REST
+ejecutara el servidor para probar el servicio REST junto con el cliente escrito en React (que se encuentra en el directorio **/public**) 
 ### `npm run dev` para ejecutar el proyecto en modo desarrollo.
 ejecutara el servidor en modo de desarrollo mediante nodemon, donde mediante esta dependencia se recargara el servicio cada vez que se detecte un cambio en los archivos del proyecto.
