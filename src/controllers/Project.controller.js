@@ -24,18 +24,30 @@ const showProjects = (req = request, res = response) => {
 const findProjectByName = (req = request, res = response) => {
   try {
     // puede llevar con valor string 'empty'
-    const name = req.params.name;
-    const date = req.params.date;
-    const projects = data.filter(
-      (pro) =>
-        pro.proyecto.toLowerCase() === name.toLowerCase() ||
-        pro.timestamp.split(" ", 1)[0] == date
-    );
+    const {name, dateInit, dateFinish} = req.params;
+    // validación basica de parametros de url
+    if(!name || !dateInit || !dateFinish){
+      return res.status(500).json({
+        code: 500,
+        msg: `The name, init data and finish date cannot be empty.`,
+      });
+    }
+
+    //generar filtro de datos
+    const projects = data.filter((pro) => {
+      if(pro.proyecto.toLowerCase() === name.toLowerCase()){
+        return pro;
+      }
+      let proDate = new Date(pro.timestamp).getTime();
+      if((proDate >= new Date(dateInit).getTime()) && (proDate <= new Date(dateFinish).getTime())){
+        return pro;
+      }
+    });
     
     if (projects.length == 0) {
       return res.status(400).json({
         code: 400,
-        msg: `no projects with ${name} or ${date} parameter`,
+        msg: `no projects with ${name} or ${dateInit} ${dateFinish} parameter`,
       });
     }
 

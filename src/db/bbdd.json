@@ -85,28 +85,40 @@
       "timestamp": "2020-01-01 12:00:00"
     },
     {
-      "proyecto": "B",
-      "subproyecto": "B-SUB-2",
+      "proyecto": "Java",
+      "subproyecto": "Java JPA",
       "estatus": 1,
-      "timestamp": "2020-01-01 12:00:00"
+      "timestamp": "2021-02-01 12:00:00"
     },
     {
-      "proyecto": "B",
-      "subproyecto": "B-SUB-2",
+      "proyecto": "Java",
+      "subproyecto": "JavaFX",
       "estatus": 1,
-      "timestamp": "2020-01-01 12:00:00"
+      "timestamp": "2021-02-02 12:00:00"
     },
     {
       "proyecto": "Java",
       "subproyecto": "JavaEE",
       "estatus": 1,
-      "timestamp": "2021-02-11 12:00:00"
+      "timestamp": "2021-02-03 12:00:00"
     },
     {
       "proyecto": "Java",
       "subproyecto": "JavaSE",
       "estatus": 1,
-      "timestamp": "2021-02-11 11:00:00"
+      "timestamp": "2021-02-04 11:00:00"
+    },
+    {
+      "proyecto": "Java",
+      "subproyecto": "Java JSF",
+      "estatus": 1,
+      "timestamp": "2021-02-05 11:00:00"
+    },
+    {
+      "proyecto": "Java",
+      "subproyecto": "Java JTA",
+      "estatus": 1,
+      "timestamp": "2021-02-06 11:00:00"
     }
   ]
 }
